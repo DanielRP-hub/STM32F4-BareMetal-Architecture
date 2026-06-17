@@ -14,3 +14,15 @@ This project focuses on the configuration of the STM32F407VGT6's External Interr
 2. Bitwise Register Control: Precise clearing and setting of `MODER`, `PUPDR`, and `IMR` registers to ensure efficient memory usage and avoid accidental pin state corruption.
 3. Edge Detection: Independent configuration of `RTSR` (Rising Trigger) and `FTSR` (Falling Trigger) bits to allow flexible interrupt activation based on switch state changes.
 4. ISR Debouncing: Manual implementation of a volatile delay loop to mitigate mechanical switch bouncing, ensuring that each physical event is handled as a single logical trigger.
+
+
+# Asynchronous Interrupt-Driven HMI
+
+## Overview
+This firmware demonstrates a robust decoupling between high-priority hardware interrupts (EXTI) and low-priority user interface updates. By utilizing `volatile` flag-based communication, the system ensures that the Interrupt Service Routines (ISRs) remain lightweight, preventing system latency during Human-Machine Interface (HMI) tasks.
+
+## Technical Architecture
+* **Interrupt Decoupling:** ISRs signal changes to the main thread via volatile state flags (`nuevaInterrupcion`, `hayCambio`), adhering to best practices in real-time software design[cite: 6].
+* **State-Machine Dispatcher:** The `message()` function acts as a centralized dispatcher, updating the LCD based on the triggered interrupt ID and specific flank state (rising/falling)[cite: 6].
+* **Event-Driven HMI:** The system remains idle in the main loop until an interrupt event occurs, demonstrating efficient power management and responsive execution[cite: 6].
+* **Manual Debouncing:** Implements structured software-level debouncing within ISR contexts to ensure clean edge detection for physical input devices[cite: 6].
