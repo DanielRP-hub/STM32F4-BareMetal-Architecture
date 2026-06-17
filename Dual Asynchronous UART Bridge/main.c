@@ -5,7 +5,7 @@
  * Operates as an asynchronous pass-through bridge between a PC terminal and an external 
  * GSM/GPS module, utilizing interrupt-driven linear buffering and AT command parsing.
  * @author Daniel Ruiz Perez
- * @date 2026-06-17
+ * @date 2026-04-16
  */
 
 #include "main.h"
