@@ -5,7 +5,7 @@
  * loop. Decouples hardware event detection from display logic to optimize system 
  * response times.
  * @author Daniel Ruiz Perez
- * @date 2026-06-17
+ * @date 2026-03-04
  */
 
 #include "main.h"
