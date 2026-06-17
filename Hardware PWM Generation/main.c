@@ -5,7 +5,7 @@
  * Timers at the register level. Maps TIM4 channels 1-4 to GPIOD pins 12-15 
  * using Alternate Function (AF2) to drive hardware PWM outputs independently.
  * @author Daniel Ruiz Perez
- * @date 2026-06-17
+ * @date 2026-04-27
  */
 
 #include "main.h"
