@@ -5,7 +5,7 @@
  * AHB1 bus offsets, and peripheral structures. Implements a hardware-debounced 
  * LED sequence utilizing precise bitwise register operations.
  * @author Daniel Ruiz Perez
- * @date 2024-06-25
+ * @date 2026-02-23
  */
 
 #include <stdint.h>
