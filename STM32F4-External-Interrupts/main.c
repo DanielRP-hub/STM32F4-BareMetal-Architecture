@@ -5,7 +5,7 @@
  * to EXTI lines via SYSCFG, and implements interrupt service routines (ISRs) 
  * for button state management and LED toggling.
  * @author Daniel Ruiz Perez
- * @date 2024-06-25
+ * @date 2024-03-03
  */
 
 #include "main.h"
